@@ -1,0 +1,475 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Inter', sans-serif;
+}
+
+header {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+   padding: 20px;
+   padding-left: 15px;
+}
+
+body {
+   background: #0f0802;
+   background: linear-gradient(
+      90deg,
+      #190802 100%,
+      #7f2b0a 100%
+   ); /* Corrigido de "100% #7f2b0a 100%" para incluir a vírgula */
+   background-repeat: no-repeat;
+   /* height: 100vh; */
+}
+
+.imagenzona {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+#perfpreto {
+   display: block;
+   border-top-left-radius: 112px;
+   border-bottom-left-radius: 112px;
+   width: 450px;
+}
+
+#txtparfum {
+   color: white;
+   padding-left: 60px;
+}
+#txttornar {
+   color: white;
+   white-space: pre-line;
+   /* padding-left: 30px; */
+}
+
+#txtsentir {
+   color: rgb(197, 197, 197);
+   /* padding-left: 30px; */
+   margin-top: 30px;
+   font-size: 18px;
+   white-space: pre-line;
+}
+.destaque {
+   color: yellow;
+}
+
+nav a {
+   font-size: 20px;
+   color: white;
+   padding: 10px;
+   text-decoration: none;
+}
+
+#btncomprar {
+   display: flex;
+   background-color: rgb(145, 54, 18);
+   color: white;
+   font-size: 20px;
+   padding: 18px 55px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 90px;
+   /* margin-left: 30px; */
+}
+#btncomprar:hover {
+   background-color: rgb(26, 22, 19);
+   color: rgb(145, 54, 18);
+   animation-name: animar;
+   animation-duration: 0.5s;
+   animation-timing-function: ease-in-out;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+}
+
+.textos {
+   padding-left: 80px;
+}
+main {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 120px;
+}
+
+a {
+   text-decoration: none;
+}
+
+#divsobre {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   /* gap: 20px; */
+   width: 100%;
+   margin-top: 200px;
+}
+
+#textobom {
+   white-space: pre-line;
+   color: gainsboro;
+   font-size: 1.5rem;
+   font-weight: 500;
+}
+
+#btncomprar2 {
+   display: flex;
+   background-color: rgb(145, 54, 18);
+   color: white;
+   font-size: 20px;
+   padding: 18px 55px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   margin-top: 50px;
+}
+
+#btncomprar2:hover {
+   background-color: rgb(26, 22, 19);
+   color: rgb(145, 54, 18);
+   animation-name: animar;
+   animation-duration: 0.5s;
+   animation-timing-function: ease-in-out;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+}
+
+#perfmar {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   width: 401px;
+   height: 401px;
+}
+
+#perfverde {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   width: 401px;
+   height: 401px;
+   border-radius: 18px;
+}
+
+#perfmarrom22 {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   width: 401px;
+   height: 401px;
+   border-radius: 18px;
+}
+
+#textosobre {
+   padding-right: 400px;
+}
+
+#tresimg {
+   margin-top: 0%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+   margin-top: 80px;
+}
+
+#txtnossa {
+   color: white;
+}
+#textomau {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 250px;
+}
+
+.hover-card {
+   position: relative;
+   display: inline-block;
+   border-radius: 16px;
+   overflow: hidden;
+}
+
+.hover-card img {
+   display: block;
+   width: 100%;
+   height: auto;
+   transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.hover-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(5, 5, 5, 0.7);
+   color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   opacity: 0;
+   transition: opacity 0.4s ease;
+   padding: 20px;
+   pointer-events: none;
+}
+
+.hover-card:hover img {
+   filter: blur(4px);
+   transform: scale(1.02);
+}
+
+.hover-card:hover .hover-overlay {
+   opacity: 1;
+   pointer-events: auto;
+}
+
+.hover-overlay h2 {
+   font-size: 22px;
+   font-family: serif;
+   margin-bottom: 10px;
+}
+
+.hover-overlay p {
+   font-size: 16px;
+   margin-bottom: 15px;
+}
+
+.hover-btn {
+   padding: 10px 20px;
+   border: 2px solid white;
+   background: transparent;
+   color: white;
+   font-size: 16px;
+   cursor: pointer;
+   border-radius: 6px;
+   transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hover-btn:hover {
+   background: white;
+   color: black;
+}
+
+#perfazul2 {
+   display: flex;
+   border-radius: 40px;
+}
+
+#coisasobre {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 200px;
+   flex-direction: column;
+}
+
+#txtcaso {
+   color: white;
+   white-space: pre-line;
+   align-items: center;
+   margin-top: 25px;
+   text-align: center;
+}
+
+form {
+   display: flex;
+   width: 100%;
+   max-width: 400px;
+   flex-direction: column;
+   gap: 15px;
+   margin-top: 50px;
+}
+
+label {
+   font-size: 14px;
+   margin-bottom: 5px;
+   color: white;
+}
+
+input,
+textarea {
+   background-color: #121212;
+   border: none;
+   border-radius: 5px;
+   padding: 12px;
+   color: #ffffff;
+   font-size: 14px;
+   resize: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+   color: #888;
+}
+
+#btnemail {
+   background-color: white;
+   padding-left: 150px;
+   padding-right: 150px;
+   padding-bottom: 10px;
+   padding-top: 10px;
+   border: none;
+   border-radius: 5px;
+   margin-top: 20px;
+   cursor: pointer;
+}
+
+.footer {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 20px;
+   background-color: #121212;
+   color: #fff;
+   padding: 30px 40px;
+   border-radius: 6px;
+   max-width: 1000px;
+   margin: 60px auto 0;
+   font-family: Arial, sans-serif;
+   height: fit-content;
+   margin-bottom: 30px;
+}
+
+.footer-section {
+   flex: 1;
+   min-width: 200px;
+}
+
+.footer-section h2 {
+   font-size: 18px;
+   margin-bottom: 10px;
+}
+
+.footer-section ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+.footer-section li {
+   margin-bottom: 6px;
+}
+
+.footer-section a {
+   color: #ccc;
+   text-decoration: none;
+   font-size: 14px;
+}
+
+.footer-section a:hover {
+   color: #fff;
+}
+
+.footer-section p {
+   font-size: 13px;
+   margin-top: 10px;
+   text-align: right;
+}
+
+@keyframes animar {
+   0% {
+      transform: scale(1);
+   }
+
+   100% {
+      transform: scale(1.05);
+   }
+}
+
+@media (max-width: 900px) {
+   body {
+      flex-direction: column;
+      justify-content: center;
+   }
+
+   a {
+      width: fit-content;
+      box-sizing: border-box;
+   }
+
+   .textos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+   }
+
+   #btncomprar {
+      margin-bottom: 50px;
+   }
+
+   #perfpreto {
+      border-radius: 100px;
+   }
+
+   header {
+      flex-direction: column;
+      align-items: center;
+      padding-left: 20px; /* Ajuste para centralizar em telas menores */
+   }
+
+   #txtparfum {
+      padding-left: 0; /* Remove padding extra em telas menores */
+   }
+
+   nav {
+      margin-top: 10px;
+   }
+
+   main {
+      flex-direction: column;
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   .textos {
+      padding-left: 0;
+   }
+
+   #divsobre {
+      flex-direction: column;
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+
+   #perfmar {
+      width: 100%;
+   }
+
+   #textosobre {
+      display: flex;
+      padding-right: 0;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+   }
+
+   #tresimg {
+      flex-direction: column;
+   }
+
+   .footer {
+      flex-direction: column;
+      text-align: center;
+      gap: 15px;
+      padding: 20px;
+      max-width: 100%;
+      margin: 60px 20px 30px; /* Ajuste as margens */
+   }
+
+   .footer-section p {
+      text-align: center;
+   }
+}
